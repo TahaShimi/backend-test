@@ -16,7 +16,8 @@ class ExchangeRateServiceTest extends TestCase {
      */
     public function getSupportedCurrenciesTest() {
         $currencies = $this->exchangeRateService->getSupportedCurrencies();
-
+        //you can change the provider any time by 
+        // $this->exchangeRateService->providerManager->setProvider("povider name")
         $this->assertContains('USD', $currencies, 'Expected USD to be a supported currency');
         $this->assertContains('EUR', $currencies, 'Expected EUR to be a supported currency');
         $this->assertContains('DKK', $currencies, 'Expected DKK to be a supported currency');
